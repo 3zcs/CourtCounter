@@ -1,0 +1,195 @@
+<?xml version="1.0" encoding="utf-8"?>
+<layout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools">
+    <ScrollView
+        android:layout_width="match_parent"
+        android:layout_height="match_parent">
+
+        <android.support.constraint.ConstraintLayout
+            android:layout_width="match_parent"
+            android:layout_height="match_parent">
+
+    <android.support.constraint.ConstraintLayout
+        android:id="@+id/constraint"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content">
+
+
+        <TextView
+            android:id="@+id/teama_text_view"
+            style="@style/teamNameText"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginLeft="8dp"
+            android:layout_marginRight="8dp"
+            android:layout_marginTop="16dp"
+            android:text="@string/teama"
+            app:layout_constraintLeft_toLeftOf="parent"
+            app:layout_constraintRight_toLeftOf="@+id/view"
+            app:layout_constraintTop_toTopOf="parent"
+            tools:text="@string/teama" />
+
+        <TextView
+            android:id="@+id/teamb_text_view"
+            style="@style/teamNameText"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginLeft="8dp"
+            android:layout_marginRight="8dp"
+            android:layout_marginTop="16dp"
+            android:text="@string/teamb"
+            app:layout_constraintLeft_toRightOf="@+id/view"
+            app:layout_constraintRight_toRightOf="parent"
+            app:layout_constraintTop_toTopOf="parent"
+            tools:text="@string/teamb" />
+
+        <TextView
+            android:id="@+id/scorea_text_view"
+            style="@style/scoreText"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginLeft="8dp"
+            android:layout_marginRight="8dp"
+            android:layout_marginTop="16dp"
+            android:text="@string/score0"
+            app:layout_constraintLeft_toLeftOf="parent"
+            app:layout_constraintRight_toLeftOf="@+id/view"
+            app:layout_constraintTop_toBottomOf="@+id/teama_text_view"
+            tools:text="@string/score0" />
+
+        <TextView
+            android:id="@+id/scoreb_text_view"
+            style="@style/scoreText"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginLeft="8dp"
+            android:layout_marginRight="8dp"
+            android:layout_marginTop="16dp"
+            android:text="@string/score0"
+            app:layout_constraintLeft_toRightOf="@+id/view"
+            app:layout_constraintRight_toRightOf="parent"
+            app:layout_constraintTop_toBottomOf="@+id/teamb_text_view"
+            tools:text="@string/score0" />
+
+        <Button
+            android:id="@+id/button_three_a"
+            style="@style/normalButton"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_marginLeft="24dp"
+            android:layout_marginRight="24dp"
+            android:layout_marginTop="23dp"
+            android:onClick="addThreePointToA"
+            android:text="@string/three_points"
+            app:layout_constraintHorizontal_bias="0.0"
+            app:layout_constraintLeft_toLeftOf="parent"
+            app:layout_constraintRight_toLeftOf="@+id/view"
+            app:layout_constraintTop_toBottomOf="@+id/scorea_text_view" />
+
+        <Button
+            android:id="@+id/button_two_a"
+            style="@style/normalButton"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_marginLeft="24dp"
+            android:layout_marginRight="24dp"
+            android:layout_marginTop="8dp"
+            android:onClick="addTwoPointTwoToA"
+            android:text="@string/two_points"
+            app:layout_constraintHorizontal_bias="0.0"
+            app:layout_constraintLeft_toLeftOf="parent"
+            app:layout_constraintRight_toRightOf="@+id/view"
+            app:layout_constraintTop_toBottomOf="@+id/button_three_a" />
+
+
+        <View
+            android:id="@+id/view"
+            android:layout_width="1dp"
+            android:layout_height="300dp"
+            android:layout_marginLeft="8dp"
+            android:layout_marginRight="8dp"
+            android:layout_marginTop="8dp"
+            android:background="@color/colorPrimaryDark"
+            app:layout_constraintLeft_toLeftOf="parent"
+            app:layout_constraintRight_toRightOf="parent"
+            app:layout_constraintTop_toTopOf="parent" />
+
+        <Button
+            android:id="@+id/button_free_a"
+            style="@style/normalButton"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_marginLeft="24dp"
+            android:layout_marginRight="24dp"
+            android:layout_marginTop="8dp"
+            android:onClick="addFreeThrowToA"
+            android:text="@string/free_throw"
+            app:layout_constraintHorizontal_bias="0.0"
+            app:layout_constraintLeft_toLeftOf="parent"
+            app:layout_constraintRight_toRightOf="@+id/view"
+            app:layout_constraintTop_toBottomOf="@+id/button_two_a" />
+
+        <Button
+            android:id="@+id/button_three_b"
+            style="@style/normalButton"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_marginLeft="24dp"
+            android:layout_marginRight="24dp"
+            android:layout_marginTop="23dp"
+            android:onClick="addThreePointToB"
+            android:text="@string/three_points"
+            app:layout_constraintHorizontal_bias="0.0"
+            app:layout_constraintLeft_toRightOf="@+id/view"
+            app:layout_constraintRight_toRightOf="parent"
+            app:layout_constraintTop_toBottomOf="@+id/scoreb_text_view" />
+
+        <Button
+            android:id="@+id/button_two_b"
+            style="@style/normalButton"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_marginLeft="24dp"
+            android:layout_marginRight="24dp"
+            android:layout_marginTop="8dp"
+            android:onClick="addTwoPointToB"
+            android:text="@string/two_points"
+            app:layout_constraintHorizontal_bias="0.0"
+            app:layout_constraintLeft_toRightOf="@+id/view"
+            app:layout_constraintRight_toRightOf="parent"
+            app:layout_constraintTop_toBottomOf="@+id/button_three_b" />
+
+        <Button
+            android:id="@+id/button_free_b"
+            style="@style/normalButton"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_marginLeft="24dp"
+            android:layout_marginRight="24dp"
+            android:layout_marginTop="8dp"
+            android:onClick="addFreeThrowToB"
+            android:text="@string/free_throw"
+            app:layout_constraintHorizontal_bias="0.0"
+            app:layout_constraintLeft_toRightOf="@+id/view"
+            app:layout_constraintRight_toRightOf="parent"
+            app:layout_constraintTop_toBottomOf="@+id/button_two_b" />
+    </android.support.constraint.ConstraintLayout>
+            <Button
+                android:id="@+id/button_reset"
+                style="@style/normalButton"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginLeft="8dp"
+                android:layout_marginRight="8dp"
+                android:layout_marginTop="32dp"
+                android:text="@string/reset"
+                app:layout_constraintLeft_toLeftOf="parent"
+                app:layout_constraintRight_toRightOf="parent"
+                app:layout_constraintTop_toBottomOf="@+id/constraint"
+                app:layout_constraintBottom_toBottomOf="parent"
+                android:layout_marginBottom="16dp" />
+
+        </android.support.constraint.ConstraintLayout>
+    </ScrollView>
+</layout>
